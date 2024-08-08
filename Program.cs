@@ -16,13 +16,12 @@ public class MyOptions
 {
     public bool Enabled { get; set; } = false;
 
-    public IReadOnlyDictionary<string, object> Fields { get; set; } = new Dictionary<string, object>();
+    public IReadOnlyDictionary<string, string> Fields { get; set; } = new Dictionary<string, string>();
 
-    // Workaround:
-
-    //#if NET8_0_OR_GREATER
-    //    = new Dictionary<string, object>();
-    //#else
-    //    //= null!;
-    //#endif
+// Workaround
+// #if NET8_0_OR_GREATER
+//        = new Dictionary<string, string>();
+// #else
+//        = null!;
+// #endif
 }
